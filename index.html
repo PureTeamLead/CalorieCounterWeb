@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calorie Counter App</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+	</head>
+	<body>
+		<form class="form-container">
+			<h1>Calorie Counter</h1>
+			<div class="budget-box">
+				<label for="budget-input">Budget: </label>
+				<input
+					type="number"
+					min="0"
+					required
+					id="budget-input"
+					placeholder="Daily Calorie Budget"
+				/>
+			</div>
+			<fieldset class="breakfast">
+				<legend>Breakfast</legend>
+				<div class="input-container"></div>
+			</fieldset>
+			<fieldset class="lunch">
+				<legend>Lunch</legend>
+				<div class="input-container"></div>
+			</fieldset>
+			<fieldset class="dinner">
+				<legend>Dinner</legend>
+				<div class="input-container"></div>
+			</fieldset>
+			<fieldset class="snacks">
+				<legend>Snacks</legend>
+				<div class="input-container"></div>
+			</fieldset>
+			<fieldset class="exercise">
+				<legend>Exercise</legend>
+				<div class="input-container"></div>
+			</fieldset>
+
+			<div class="controls">
+				<div class="selection">
+					<label for="entry-dropdown">Add food or exercise: </label>
+					<select id="entry-dropdown" name="options">
+						<option value="breakfast" selected>Breakfast</option>
+						<option value="lunch">Lunch</option>
+						<option value="dinner">Dinner</option>
+						<option value="snacks">Snacks</option>
+						<option value="exercise">Exercise</option>
+					</select>
+					<button class="btn" type="button" id="addEntry">Add Entry</button>
+				</div>
+				<div class="calculations">
+					<button class="btn" type="submit" id="calculate-btn">
+						Calculate Remaining Calories
+					</button>
+					<button class="btn" type="button" id="clear-btn">Clear</button>
+				</div>
+			</div>
+			<div class="results hide" id="output"></div>
+		</form>
+
+		<script src="index.js"></script>
+	</body>
+</html>
